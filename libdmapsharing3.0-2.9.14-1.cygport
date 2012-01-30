@@ -1,0 +1,15 @@
+ORIG_PN="libdmapsharing"
+inherit gnome2
+
+
+HOMEPAGE="http://www.flyn.org/projects/libdmapsharing/"
+SRC_URI="http://www.flyn.org/projects/libdmapsharing/${ORIG_PN}-${PV}.tar.gz"
+PATCH_URI="2.9.14-no-undefined.patch"
+
+PKG_NAMES="libdmapsharing3.0_2 libdmapsharing3.0-devel"
+libdmapsharing3_0_2_CONTENTS="usr/bin/cygdmapsharing-3.0-2.dll usr/share/doc/"
+libdmapsharing3_0_devel_CONTENTS="usr/include/ usr/lib/ usr/share/gtk-doc/"
+
+DIFF_EXCLUDES="dmap-config.h"
+
+CYGCONF_ARGS="--with-mdns=avahi"
