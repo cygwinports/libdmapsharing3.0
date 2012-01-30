@@ -12,4 +12,6 @@ libdmapsharing3_0_devel_CONTENTS="usr/include/ usr/lib/ usr/share/gtk-doc/"
 
 DIFF_EXCLUDES="dmap-config.h"
 
-CYGCONF_ARGS="--with-mdns=avahi"
+CYGCONF_ARGS="--with-mdns=dns_sd"
+
+KEEP_LA_FILES="none"

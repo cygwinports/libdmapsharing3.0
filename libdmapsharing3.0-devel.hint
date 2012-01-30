@@ -1,5 +1,5 @@
 category: Gnome
-requires: libdmapsharing3.0_2 libavahi-client-devel libavahi-common-devel libavahi-glib-devel libgdk_pixbuf2.0-devel libglib2.0-devel libgstinterfaces0.10-devel libgstreamer0.10-devel libsoup2.4-devel zlib-devel
+requires: libdmapsharing3.0_2 libglib2.0-devel libgstreamer0.10-devel libsoup2.4-devel
 external-source: libdmapsharing3.0
 sdesc: "GNOME DAAP/DPAP library (development)"
 ldesc: "libdmapsharing is a library you may use to access and share DMAP 
