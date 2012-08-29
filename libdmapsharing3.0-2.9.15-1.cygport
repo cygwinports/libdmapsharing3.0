@@ -1,7 +1,10 @@
 ORIG_PN="libdmapsharing"
 inherit gnome2
 
-
+CATEGORY="Gnome"
+SUMMARY="GNOME DAAP/DPAP library (sources)"
+DESCRIPTION="libdmapsharing is a library you may use to access and share DMAP
+(DAAP & DPAP) content. The library is written in C using GObject and libsoup."
 HOMEPAGE="http://www.flyn.org/projects/libdmapsharing/"
 SRC_URI="http://www.flyn.org/projects/libdmapsharing/${ORIG_PN}-${PV}.tar.gz"
 PATCH_URI="2.9.14-no-undefined.patch"
