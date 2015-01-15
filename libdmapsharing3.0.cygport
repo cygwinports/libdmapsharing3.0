@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="libdmapsharing3.0"
-VERSION=2.9.22
+VERSION=2.9.29
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="GNOME DAAP/DPAP library"
@@ -10,14 +10,22 @@ DESCRIPTION="libdmapsharing is a library you may use to access and share DMAP
 HOMEPAGE="http://www.flyn.org/projects/libdmapsharing/"
 SRC_URI="http://www.flyn.org/projects/libdmapsharing/libdmapsharing-${VERSION}.tar.gz"
 SRC_DIR="libdmapsharing-${VERSION}"
-PATCH_URI="2.9.14-no-undefined.patch"
+PATCH_URI="
+	2.9.14-no-undefined.patch
+	2.9.29-skip-build-vapi.patch
+	2.9.29-gtk-doc-vpath.patch
+"
 
-PKG_NAMES="libdmapsharing3.0_2 libdmapsharing3.0-devel"
+PKG_NAMES="${NAME}_2 ${NAME}-devel ${NAME}-doc girepository-DMAP3.0 vala-${NAME}"
 libdmapsharing3_0_2_CONTENTS="usr/bin/cygdmapsharing-3.0-2.dll usr/share/doc/"
-libdmapsharing3_0_devel_CONTENTS="usr/include/ usr/lib/ usr/share/gtk-doc/"
+libdmapsharing3_0_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
+libdmapsharing3_0_doc_CATEGORY="Doc"
+libdmapsharing3_0_doc_CONTENTS="usr/share/gtk-doc/html/libdmapsharing-3.0/"
+girepository_DMAP3_0_CONTENTS="usr/*/gir*-1.0/DMAP-3.0.*"
+vala_libdmapsharing3_0_CONTENTS="usr/share/vala/vapi/libdmapsharing-3.0.*"
 
 DIFF_EXCLUDES="dmap-config.h"
 
-CYGCONF_ARGS="--with-mdns=dns_sd"
+CYGCONF_ARGS="--with-mdns=avahi"
 
 KEEP_LA_FILES="none"

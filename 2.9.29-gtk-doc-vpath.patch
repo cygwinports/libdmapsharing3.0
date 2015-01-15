@@ -1,0 +1,11 @@
+--- origsrc/libdmapsharing-2.9.29/doc/Makefile.am	2014-05-03 04:31:10.000000000 -0500
++++ src/libdmapsharing-2.9.29/doc/Makefile.am	2015-01-14 17:43:09.830145700 -0600
+@@ -21,7 +21,7 @@ DOC_MAIN_SGML_FILE=$(DOC_MODULE)-docs.xm
+ # gtk-doc will search all .c & .h files beneath here for inline comments
+ # documenting the functions and macros.
+ # e.g. DOC_SOURCE_DIR=../../../gtk
+-DOC_SOURCE_DIR=../libdmapsharing
++DOC_SOURCE_DIR=$(top_srcdir)/libdmapsharing
+ 
+ # Extra options to pass to gtkdoc-scangobj. Not normally needed.
+ SCANGOBJ_OPTIONS=
