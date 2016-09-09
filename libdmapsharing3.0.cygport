@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="libdmapsharing3.0"
-VERSION=2.9.29
+VERSION=2.9.36
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="GNOME DAAP/DPAP library"
